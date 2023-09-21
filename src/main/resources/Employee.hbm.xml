@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "entity.Employee" table = "EMPLOYEE">
+      
+      <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta>
+      
+<id name = "id" type = "int" column = "id">
+<!--//mapping de la propriété de l'identifiant unique vers la clef primaire de la table-->
+
+         <generator class="native"/>
+   <!--       //Strategie de generation de cle primaire  -->
+      </id>
+      
+      <property name = "firstName" column = "first_name" type = "string"/><!-- correspondance dans la table base donnee -->
+      <property name = "lastName" column = "last_name" type = "string"/>
+      <property name = "salary" column = "salary" type = "int"/>
+      
+   </class>
+</hibernate-mapping>
